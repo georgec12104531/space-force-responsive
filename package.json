@@ -1,0 +1,14 @@
+{
+  "name": "marcom-fed-code-challenge",
+  "version": "1.0.0",
+  "description": "Marcom FED Code Challenge",
+  "scripts": {
+    "postinstall": "pika-web",
+    "start": "live-server src --host=localhost --port=5678 --mount=/web_modules:./web_modules"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@pika/web": "^0.6.1",
+    "live-server": "^1.2.1"
+  }
+}
