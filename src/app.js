@@ -26,16 +26,6 @@ window.addEventListener('keydown', handleSecretCode)
 // FUNCTIONS
 
 function handleNavSelection(e) {
-  // Styles selected nav item as active and
-  // the remaining nav items as inactive
-  navItems.forEach((nav) => {
-    if (nav.textContent === e.target.textContent) {
-      nav.classList.add("active");
-    } else {
-      nav.classList.remove("active");
-    }
-  });
-
   // Without this, users can click other nav sections while
   // the page is scrolling
   handleNotClickableNavBar();
