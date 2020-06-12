@@ -66,8 +66,7 @@ function handleScroll() {
 
   // Look for the corresponding navItem at the currentIndex and render it active
   navItems.forEach((nav, index) => {
-    if (index === currentIndex) {
-      // window.history.replaceState({}, '', `/src/index.html${nav.getAttribute('href')}`);
+    if (index === currentIndex) { 
       nav.classList.add("active");
     } else {
       nav.classList.remove("active");
