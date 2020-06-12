@@ -1,6 +1,6 @@
 // Variables 
 let password = '';
-
+console.log(document.querySelector('asdf'))
 // DOM ELEMENTS
 
 // Navigation Bar
@@ -10,6 +10,7 @@ const footer = document.querySelector('footer')
 
 // EVENT LISTENERS
 
+// Users have 8 seconds to type in the password
 setInterval(() => {
   clearPassword();
 }, 8000);
@@ -70,7 +71,7 @@ function handleScroll() {
     }
   }
 
-  // Look for the corresponding navItems Index and make it active
+  // Look for the corresponding navItems at the current Index and render it active
   navItems.forEach((nav, index) => {
     if (index === currentIndex) {
       nav.classList.add("active");
@@ -100,6 +101,7 @@ function clearPassword() {
 }
 
 function addAudioToFooter() {
+  if (document.querySelector('audio')) return;
   let audio = document.createElement('audio');
   audio.src = "../audio/Star Wars Main Theme (Full).mp3";
   footer.append(audio);
