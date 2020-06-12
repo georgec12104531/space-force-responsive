@@ -156,11 +156,6 @@ body main section h3 {
   font-weight: lighter;
 }
 
-body main section a#section-2 {
-  visibility: visible;
-  content: "\00A7";
-}
-
 /* Footer */
 body footer {
   position: fixed;

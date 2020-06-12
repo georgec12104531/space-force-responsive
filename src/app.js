@@ -1,6 +1,6 @@
 // Variables 
 let password = '';
-console.log(document.querySelector('asdf'))
+
 // DOM ELEMENTS
 
 // Navigation Bar
@@ -71,7 +71,7 @@ function handleScroll() {
     }
   }
 
-  // Look for the corresponding navItems at the current Index and render it active
+  // Look for the corresponding navItem at the currentIndex and render it active
   navItems.forEach((nav, index) => {
     if (index === currentIndex) {
       nav.classList.add("active");
