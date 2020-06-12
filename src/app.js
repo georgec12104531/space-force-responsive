@@ -15,6 +15,9 @@ setInterval(() => {
   clearPassword();
 }, 8000);
 
+// Navigation Selection
+nav.addEventListener('click', handleNavSelection)
+
 // Scroll Navigation
 window.addEventListener("scroll", function (e) {
   handleScroll();
@@ -64,6 +67,7 @@ function handleScroll() {
   // Look for the corresponding navItem at the currentIndex and render it active
   navItems.forEach((nav, index) => {
     if (index === currentIndex) {
+      // window.history.replaceState({}, '', `/src/index.html${nav.getAttribute('href')}`);
       nav.classList.add("active");
     } else {
       nav.classList.remove("active");
