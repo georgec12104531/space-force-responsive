@@ -1,0 +1,363 @@
+/* Desktop */
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Raleway', 'Helvetica-Neue', 'Arial', sans-serif;
+  line-height: 1.2;
+  margin: 1.414em 0 0.5em;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 3.998em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.827em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.999em;
+}
+
+h4 {
+  font-size: 1.414em;
+}
+
+small, .font-small {
+  font-size: 0.707em;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  background-color: rgb(225, 225, 225);
+  font-size: 16px;
+  color: #333333;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(225, 225, 225);
+}
+
+body header a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+body header a.logo {
+  display: block;
+  height: 383px;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+body header a span {
+  width: 100%;
+}
+
+body header a span.visually-hidden {
+  visibility: visible;
+  display: block;
+  background-image: url(https://2.bp.blogspot.com/_DuAMT8iTg8o/TNB7ySqykiI/AAAAAAAABJM/y8SK8bxNV4Q/s1600/xwing.jpg);
+  height: 1000px;
+  width: 1000px;
+  transform: rotate(-36deg) scaleX(-1.2) scaleY(1.2);
+  background-position: -135px -29px;
+}
+
+body header h1 {
+  color: white;
+  position: absolute;
+  top: 173px;
+  font-size: 76px;
+}
+
+/* Nav Bar */
+body header nav ul {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  padding: 0;
+}
+
+body header nav ul li {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+body header nav ul li a {
+  padding: 5px 10px 0px 10px;
+  text-decoration: none;
+  border-bottom: 4px solid #B6B6B6;
+  color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+body header nav.not-clickable {
+  pointer-events: none;
+}
+
+body header nav ul li a.active {
+  color: #159394;
+  border-bottom: 4px solid #3F7474;
+}
+
+/* Body content */
+body main {
+  margin-top: 383px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body main section {
+  width: 517px;
+}
+
+/* Section sign */
+body main section:after {
+  content: "\00A7";
+}
+
+body main section h2 {
+  display: none;
+}
+
+/* Top accounts for header when using anchor points as well as removed h2 */
+body main section a {
+  display: block;
+  position: relative;
+  top: -400px;
+}
+
+body main section h3 {
+  font-weight: lighter;
+}
+
+body main section a#section-2 {
+  visibility: visible;
+  content: "\00A7";
+}
+
+/* Footer */
+body footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #3E3B47;
+  color: white;
+}
+
+body footer nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+body footer nav ul li {
+  list-style-type: none;
+  padding: 0 5px 0 5px;
+}
+
+
+body footer nav ul li a { 
+  color: white;
+}
+
+body footer nav ul li a[href="#link-2"] { 
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 1px 15px 1px 15px;
+}
+
+/* iPad */
+@media only screen 
+  and (min-device-height: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    body header a span.visually-hidden {
+      background-image: none;
+      background-color: #36333E;
+      -webkit-mask:  url('../images/Rebel_Alliance_logo.svg') space;
+      mask: url('../images/Rebel_Alliance_logo.svg') space;
+      transform: none;
+      background-repeat: space;
+      margin-left: 64px;
+      margin-right: 64px;
+      width: 100%
+    }
+
+    body header a.logo {
+      height: 83px;
+      background-color: #524F5A;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      transform: none;
+      pointer-events: none;
+    }
+
+    body header h1 {
+      top: 9px;
+      font-size: 52px;
+      margin: 0;
+    }
+
+    body main {
+      margin-top: 90px;
+    }
+
+    body main section a {
+      top: -134px;
+    }
+}
+
+/* iPhone */
+@media only screen 
+  and (min-device-height: 375px) 
+  and (max-device-width: 667px)  
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body header a span.visually-hidden {
+      background-image: none;
+      background-color: #36333E;
+      -webkit-mask: url(../images/Rebel_Alliance_logo.svg) no-repeat;
+      -webkit-mask-position: top right;
+      mask-position: 5%;
+      mask: url(../images/Rebel_Alliance_logo.svg) space;
+      transform: scale(0.5);
+      background-repeat: no-repeat;
+      margin-top: -47px;
+      margin-left: 125px;
+      height: 195px;
+    }
+
+    body header a.logo {
+      height: 100px;
+      background-color: #524F5A;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      transform: none;
+      pointer-events: none;
+      width: 667px;
+      padding-right: 30px
+    }
+
+    body header h1 {
+      top: 17px;
+      left: 20px;
+      font-size: 60px;
+      margin: 0;
+    }
+
+    body main section {
+      width: 100%;
+    }
+
+    body header nav {
+      width: 100%;
+    }
+
+    body header nav.unclickable {
+      pointer-events: none;
+      color: red;
+    }
+
+    body header nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    body header nav ul li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    body header nav ul li a {
+      width: 100%;
+    }
+
+    body main {
+      margin-top: 180px;
+      padding: 0px 27px 0 27px;
+    }
+
+    body main section a {
+      top: -180px;
+    }
+
+    body footer {
+      height: 30px;
+    }
+
+    body footer {
+      height: 35px;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+
+    body footer nav {
+      margin-left: 15px;
+    }
+
+    body footer aside {
+      margin-right: 55px
+    }
+}
+
+/* iPhone Landscape */
+@media only screen 
+  and (max-device-height: 375px) 
+  and (min-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    body header a.logo {
+      width: 1193px;
+    }
+    
+    body main {
+      padding: 0px 90px 0 90px;
+      margin-top: 147px;
+    }
+
+    body header nav ul {
+      margin: 0;
+    }
+
+    body main section a {
+      top: -147px;
+    }
+}
